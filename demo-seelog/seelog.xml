@@ -1,0 +1,13 @@
+<seelog minlevel="debug">
+    <outputs formatid="main">
+        <rollingfile type="size" filename="./logs/info.log" maxsize="5000000" maxrolls="5"/>
+        <filter levels="error">
+            <!--最大5M-->
+            <rollingfile type="size" filename="./logs/error.log" maxsize="5000000" maxrolls="5"/>
+        </filter>
+    </outputs>
+    <formats>
+        <format id="main" format="%Date %Time [%LEV] %Msg%n" />
+        <format id="error" format="%File %FullPath %Func %Msg%n" />
+    </formats>
+</seelog>
