@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func fibonacci(n int, c chan int) {
 	x, y := 0, 1
 	for i := 0; i < n; i++ {
 		c <- x
+		time.Sleep(500 * time.Millisecond)
 		x, y = y, x+y
 	}
 
