@@ -1,5 +1,5 @@
 /*
-通达channel同步协程可以获取返回值
+通过channel同步协程可以获取返回值
 */
 
 package main
