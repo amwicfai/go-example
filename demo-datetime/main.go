@@ -20,5 +20,8 @@ func main() {
 
 	//时间格式化, 注意不是yyyy-mm-dd这样的格式
 	now := time.Now().Format("2006-01-02T15:04:05Z")
-	fmt.Print(now)
+	fmt.Println(now)
+
+	now = time.Now().Format("2006-01-02 15:04:05.999999")
+	fmt.Println(now)
 }
